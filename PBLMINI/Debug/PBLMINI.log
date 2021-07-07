@@ -1,8 +1,12 @@
 ﻿  MyForm.cpp
-c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1358): warning C4129: '/': unrecognized character escape sequence
-c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1570): warning C4129: '/': unrecognized character escape sequence
-c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1416): warning C4101: 'q': unreferenced local variable
-c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1433): warning C4101: 'q': unreferenced local variable
-c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1451): warning C4101: 'q': unreferenced local variable
+c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1326): warning C4129: '/': unrecognized character escape sequence
+c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1573): warning C4129: '/': unrecognized character escape sequence
+c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1709): warning C4129: '/': unrecognized character escape sequence
+c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1879): warning C4129: '/': unrecognized character escape sequence
+c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1392): warning C4101: 'q': unreferenced local variable
+c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1409): warning C4101: 'q': unreferenced local variable
+c:\users\akki\source\repos\pblmini\pblmini\myform1.h(1427): warning C4101: 'q': unreferenced local variable
+  MyForm2.cpp
+  Generating Code...
   MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   PBLMINI.vcxproj -> C:\Users\Akki\source\repos\PBLMINI\Debug\PBLMINI.exe

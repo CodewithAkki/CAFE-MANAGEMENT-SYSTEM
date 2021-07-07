@@ -789,12 +789,13 @@ namespace PBLMINI {
 			// 
 			// butbillform
 			// 
-			this->butbillform->Location = System::Drawing::Point(1275, 493);
+			this->butbillform->BackColor = System::Drawing::Color::White;
+			this->butbillform->Location = System::Drawing::Point(1275, 491);
 			this->butbillform->Name = L"butbillform";
-			this->butbillform->Size = System::Drawing::Size(75, 23);
+			this->butbillform->Size = System::Drawing::Size(75, 25);
 			this->butbillform->TabIndex = 50;
 			this->butbillform->Text = L"Billing";
-			this->butbillform->UseVisualStyleBackColor = true;
+			this->butbillform->UseVisualStyleBackColor = false;
 			this->butbillform->Visible = false;
 			this->butbillform->Click += gcnew System::EventHandler(this, &MyForm::butbillform_Click);
 			// 
@@ -845,7 +846,7 @@ namespace PBLMINI {
 			// 
 			// timer1
 			// 
-			this->timer1->Interval = 1000;
+			this->timer1->Interval = 1300;
 			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm::timer1_Tick);
 			// 
 			// MyForm
@@ -1266,64 +1267,83 @@ private: System::Void lamenu_Click(System::Object^  sender, System::EventArgs^  
 private: System::Void pictureBox1_Click(System::Object^  sender, System::EventArgs^  e) {
 	String^ user = txtusername->Text;
 	String^ pass = txtpass->Text;
-	if (user == "Admin" && pass == "Admin") {
 
-		MyForm1^ f = gcnew MyForm1();
-		f->Show();
-	}
+	int i = 0;
+	if(user->Trim()->Length >= 2 && pass->Trim()->Length >= 2){
+	if (user->Trim()->Length >= 2) {
+		if (pass->Trim()->Length >= 2) {
+			try {
+				String^ connstring = "server=localhost;port=3306;database=project; uid = root; password = root@123";
+				MySqlConnection^ conn = gcnew MySqlConnection(connstring);
+				conn->Open();
+				String^ select = "select * from emp where firstname=@first AND password1=@pass ";
+				MySqlCommand^ cmdselect = gcnew MySqlCommand(select, conn);
+				cmdselect->Parameters->AddWithValue("@first", user);
+				cmdselect->Parameters->AddWithValue("@pass", pass);
 
-	if (user->Trim()->Length >= 2 && pass->Trim()->Length >= 2) {
-		try {
-			String^ connstring = "server=localhost;port=3306;database=project; uid = root; password = root@123";
-			MySqlConnection^ conn = gcnew MySqlConnection(connstring);
-			conn->Open();
-			String^ select = "select * from emp where firstname=@first AND password1=@pass ";
-			MySqlCommand^ cmdselect = gcnew MySqlCommand(select, conn);
-			cmdselect->Parameters->AddWithValue("@first", user);
-			cmdselect->Parameters->AddWithValue("@pass", pass);
 
-			int i = 0;
-			MySqlDataReader^ dr = cmdselect->ExecuteReader();
-			while (dr->Read()) {
-				// MessageBox::Show(dr->GetString("lastname"), "data" + i);
-				i = i + 1;
-			}
-			if (i == 0) {
-				if (user!="Admin") {
-					MessageBox::Show("invalid login");
+				MySqlDataReader^ dr = cmdselect->ExecuteReader();
+				while (dr->Read()) {
+					//MessageBox::Show(dr->GetString("lastname"), "data" + i);
+					i = i + 1;
 				}
-				if(pass!="Admin") {
+				/*	if (i == 0) {
+						if (user!="Admin" && ) {
+							MessageBox::Show("invalid login");
+						}
+						if (i == 0) {
+							if (pass = "Admin") {
+								MessageBox::Show("Invalid login", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+							}
+						}
+					}*/
+				if (txtusername->Text == "Admin" && txtpass->Text == "Admin") {
+					txtusername->BackColor = Color::Black;
+					txtpass->BackColor = Color::Black;
+					MyForm1^ f = gcnew MyForm1();
+					f->Show();
+				}
+				else if (i == 1) {
+					if (MessageBox::Show("done successfully", "login valid", MessageBoxButtons::OK, MessageBoxIcon::Information) == System::Windows::Forms::DialogResult::OK) {
+						txtusername->BackColor = Color::Black;
+						txtpass->BackColor = Color::Black;
+						txttotal->Text = "0";
+						logout->Visible = true;
+						la1login->Visible = false;
+						commenu();
+						combo();
+						laabout->Visible = false;
+						lacontact->Visible = false;
+						butbillform->Visible = true;
+
+					}
+				}
+				else {
 					MessageBox::Show("Invalid login", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 				}
-			}
-			else if (i >= 2) {
-				MessageBox::Show("invalid login duplicate recored found");
-			}
-			else if (i == 1) {
-				if (MessageBox::Show("done successfully", "login valid", MessageBoxButtons::OK, MessageBoxIcon::Information)==System::Windows::Forms::DialogResult::OK) {
-					txttotal->Text = "0";
-					logout->Visible = true;
-					la1login->Visible = false;
-					commenu();
-					combo();
-					laabout->Visible = false;
-					lacontact->Visible = false;
-					butbillform->Visible = true;
-					
-				}
-				
-			
-			}
-			conn->Close();
-		}
-		catch (Exception^ e) {
-			MessageBox::Show(e->ToString());
-		}
 
+				conn->Close();
+			}
+			catch (Exception^ e) {
+				MessageBox::Show(e->ToString());
+				conn->Close();
+			}
+		}
+		else {
+			txtusername->BackColor = Color::Red;
+			MessageBox::Show("Enter Username", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+		}
 	}
 	else {
-		MessageBox::Show("Enter Value please", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+		txtpass->BackColor = Color::Red;
+		MessageBox::Show("Enter Password", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 	}
+}
+else {
+		txtusername->BackColor = Color::Red;
+		txtpass->BackColor = Color::Red;
+MessageBox::Show("Enter Username and Password", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+}
 }
 		 void food() {
 			 img->Visible = true;
@@ -1904,15 +1924,20 @@ private: System::Void butbillform_Click(System::Object^  sender, System::EventAr
 			s->Show();
 			txttotal->Text = "";
 			Email->Text = "";
+			Email->BackColor = Color::Black;
 
 		}
 		else {
+			Email->BackColor = Color::Red;
 			MessageBox::Show("Enter valid email", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+			
 		}
 	}
 	else
 	{
+		Email->BackColor = Color::Red;
 		MessageBox::Show("Enter email", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+		
 	}
 }
 
@@ -1965,7 +1990,7 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 		MySqlDataReader^ dr = s->ExecuteReader();
 		while (dr->Read()) {
 			p->PlayLooping();
-			if (MessageBox::Show(dr->GetString("email") + "\n" + dr->GetString("orders"), "oder info", MessageBoxButtons::YesNo, MessageBoxIcon::Information) == System::Windows::Forms::DialogResult::Yes) {
+			if (MessageBox::Show(dr->GetString("email") + "\n" + dr->GetString("orders"), "REMINDER", MessageBoxButtons::YesNo, MessageBoxIcon::Information) == System::Windows::Forms::DialogResult::Yes) {
 				p->Stop();
 			}
 		}

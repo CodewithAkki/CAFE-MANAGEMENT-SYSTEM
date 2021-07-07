@@ -34,7 +34,7 @@ namespace PBLMINI {
 			timer1->Start();
 			email = s;
 			offer = a;
-			MessageBox::Show(s+" "+Convert::ToString(offer));
+			MessageBox::Show(s+"\n"+"OFFER:"+" "+Convert::ToString(offer),"OFFER",MessageBoxButtons::OK,MessageBoxIcon::Information);
 			//
 			//TODO: Add the constructor code here
 			//
@@ -76,7 +76,7 @@ namespace PBLMINI {
 	private: System::Windows::Forms::Timer^  timer1;
 	private: System::Windows::Forms::Label^  labdis;
 
-	private: System::Windows::Forms::Label^  label10;
+
 
 
 
@@ -111,6 +111,7 @@ namespace PBLMINI {
 			this->printDocument1 = (gcnew System::Drawing::Printing::PrintDocument());
 			this->printPreviewDialog1 = (gcnew System::Windows::Forms::PrintPreviewDialog());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->labdis = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
@@ -127,8 +128,6 @@ namespace PBLMINI {
 			this->total = (gcnew System::Windows::Forms::Label());
 			this->rtprint = (gcnew System::Windows::Forms::DataGridView());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->rtprint))->BeginInit();
@@ -181,6 +180,15 @@ namespace PBLMINI {
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(437, 550);
 			this->panel1->TabIndex = 2;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(244, 437);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(15, 13);
+			this->label9->TabIndex = 23;
+			this->label9->Text = L"%";
 			// 
 			// label11
 			// 
@@ -329,33 +337,14 @@ namespace PBLMINI {
 			// 
 			// timer1
 			// 
-			this->timer1->Interval = 1000;
+			this->timer1->Interval = 1300;
 			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm2::timer1_Tick);
-			// 
-			// label10
-			// 
-			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(579, 423);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(26, 13);
-			this->label10->TabIndex = 4;
-			this->label10->Text = L"time";
-			// 
-			// label9
-			// 
-			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(253, 437);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(15, 13);
-			this->label9->TabIndex = 23;
-			this->label9->Text = L"%";
 			// 
 			// MyForm2
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(682, 625);
-			this->Controls->Add(this->label10);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->button1);
 			this->Name = L"MyForm2";
@@ -367,7 +356,6 @@ namespace PBLMINI {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->rtprint))->EndInit();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 
@@ -570,7 +558,7 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 	DateTime d = DateTime::Now;
 	label8->Text = d.AddMinutes(1).ToLongTimeString();
 	ladate->Text = d.ToShortDateString();
-	label10->Text = d.ToLongTimeString();
+	//label10->Text = d.ToLongTimeString();
 	String^ connstring = "server=localhost;port=3306;database=project; uid = root; password = root@123";
 	MySqlConnection^ conn = gcnew MySqlConnection(connstring);
 	try {
@@ -585,7 +573,7 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 		MySqlDataReader^ dr = s->ExecuteReader();
 		while (dr->Read()) {
 			p->PlayLooping();
-			if(MessageBox::Show(dr->GetString("email") + "\n" + dr->GetString("orders"), "oder info", MessageBoxButtons::YesNo, MessageBoxIcon::Information)==System::Windows::Forms::DialogResult::Yes ){
+			if(MessageBox::Show(dr->GetString("email") + "\n" + dr->GetString("orders"), "REMINDER", MessageBoxButtons::YesNo, MessageBoxIcon::Information)==System::Windows::Forms::DialogResult::Yes ){
 				p->Stop();
 			}
 		}

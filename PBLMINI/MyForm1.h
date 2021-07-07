@@ -44,10 +44,10 @@ namespace PBLMINI {
 		}
 	private: System::Windows::Forms::Label^  la1about;
 	protected:
-	private: System::Windows::Forms::Label^  la1contct;
+
 	private: System::Windows::Forms::Label^  la1menu;
 
-	private: System::Windows::Forms::Label^  lacontact;
+
 	private: System::Windows::Forms::Label^  laabout;
 	private: System::Windows::Forms::Label^  lamenu;
 	private: System::Windows::Forms::Label^  lalogin;
@@ -208,16 +208,13 @@ private: System::ComponentModel::IContainer^  components;
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm1::typeid));
 			this->la1about = (gcnew System::Windows::Forms::Label());
-			this->la1contct = (gcnew System::Windows::Forms::Label());
 			this->la1menu = (gcnew System::Windows::Forms::Label());
-			this->lacontact = (gcnew System::Windows::Forms::Label());
 			this->laabout = (gcnew System::Windows::Forms::Label());
 			this->lamenu = (gcnew System::Windows::Forms::Label());
 			this->lalogin = (gcnew System::Windows::Forms::Label());
 			this->la1login = (gcnew System::Windows::Forms::Label());
 			this->employeetable = (gcnew System::Windows::Forms::DataGridView());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->eid = (gcnew System::Windows::Forms::Label());
 			this->butok = (gcnew System::Windows::Forms::Button());
 			this->txtid = (gcnew System::Windows::Forms::TextBox());
@@ -243,6 +240,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->mobileno = (gcnew System::Windows::Forms::TextBox());
 			this->firstname = (gcnew System::Windows::Forms::TextBox());
 			this->lastname = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->backgroundWorker1 = (gcnew System::ComponentModel::BackgroundWorker());
 			this->comboproducts = (gcnew System::Windows::Forms::ComboBox());
@@ -311,20 +309,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->la1about->Text = L"products";
 			this->la1about->Visible = false;
 			// 
-			// la1contct
-			// 
-			this->la1contct->AutoSize = true;
-			this->la1contct->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(180)),
-				static_cast<System::Int32>(static_cast<System::Byte>(118)));
-			this->la1contct->Font = (gcnew System::Drawing::Font(L"Segoe UI", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->la1contct->Location = System::Drawing::Point(1088, -1);
-			this->la1contct->Name = L"la1contct";
-			this->la1contct->Size = System::Drawing::Size(142, 37);
-			this->la1contct->TabIndex = 19;
-			this->la1contct->Text = L"Contact us";
-			this->la1contct->Visible = false;
-			// 
 			// la1menu
 			// 
 			this->la1menu->AutoSize = true;
@@ -339,22 +323,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->la1menu->Text = L"Customer";
 			this->la1menu->Visible = false;
 			// 
-			// lacontact
-			// 
-			this->lacontact->AutoSize = true;
-			this->lacontact->BackColor = System::Drawing::SystemColors::Control;
-			this->lacontact->Font = (gcnew System::Drawing::Font(L"Segoe UI", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->lacontact->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(245)), static_cast<System::Int32>(static_cast<System::Byte>(151)),
-				static_cast<System::Int32>(static_cast<System::Byte>(80)));
-			this->lacontact->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"lacontact.Image")));
-			this->lacontact->Location = System::Drawing::Point(1088, -1);
-			this->lacontact->Name = L"lacontact";
-			this->lacontact->Size = System::Drawing::Size(142, 37);
-			this->lacontact->TabIndex = 24;
-			this->lacontact->Text = L"Contact us";
-			this->lacontact->Click += gcnew System::EventHandler(this, &MyForm1::lacontact_Click);
-			// 
 			// laabout
 			// 
 			this->laabout->AutoSize = true;
@@ -366,9 +334,9 @@ private: System::ComponentModel::IContainer^  components;
 			this->laabout->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"laabout.Image")));
 			this->laabout->Location = System::Drawing::Point(962, -1);
 			this->laabout->Name = L"laabout";
-			this->laabout->Size = System::Drawing::Size(120, 37);
+			this->laabout->Size = System::Drawing::Size(126, 37);
 			this->laabout->TabIndex = 23;
-			this->laabout->Text = L"Products";
+			this->laabout->Text = L"Products.";
 			this->laabout->Click += gcnew System::EventHandler(this, &MyForm1::laabout_Click);
 			// 
 			// lamenu
@@ -425,13 +393,13 @@ private: System::ComponentModel::IContainer^  components;
 			this->employeetable->BorderStyle = System::Windows::Forms::BorderStyle::None;
 			this->employeetable->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->employeetable->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
-			this->employeetable->Location = System::Drawing::Point(584, 61);
+			this->employeetable->Location = System::Drawing::Point(595, 61);
 			this->employeetable->MultiSelect = false;
 			this->employeetable->Name = L"employeetable";
 			this->employeetable->ReadOnly = true;
 			this->employeetable->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->employeetable->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->employeetable->Size = System::Drawing::Size(766, 454);
+			this->employeetable->Size = System::Drawing::Size(755, 454);
 			this->employeetable->TabIndex = 59;
 			this->employeetable->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm1::employeetable_CellClick);
 			// 
@@ -466,23 +434,6 @@ private: System::ComponentModel::IContainer^  components;
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(539, 488);
 			this->panel1->TabIndex = 60;
-			// 
-			// dataGridView2
-			// 
-			this->dataGridView2->AllowUserToAddRows = false;
-			this->dataGridView2->AllowUserToDeleteRows = false;
-			this->dataGridView2->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->dataGridView2->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCells;
-			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView2->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
-			this->dataGridView2->Location = System::Drawing::Point(557, 61);
-			this->dataGridView2->MultiSelect = false;
-			this->dataGridView2->Name = L"dataGridView2";
-			this->dataGridView2->ReadOnly = true;
-			this->dataGridView2->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->dataGridView2->Size = System::Drawing::Size(288, 241);
-			this->dataGridView2->TabIndex = 102;
-			this->dataGridView2->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm1::dataGridView2_CellClick);
 			// 
 			// eid
 			// 
@@ -564,7 +515,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(111, 45);
 			this->button1->TabIndex = 77;
-			this->button1->Text = L"submit  >>";
+			this->button1->Text = L"Register  >>";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click_1);
 			// 
@@ -707,7 +658,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			this->email->Location = System::Drawing::Point(149, 229);
 			this->email->Name = L"email";
-			this->email->Size = System::Drawing::Size(125, 20);
+			this->email->Size = System::Drawing::Size(178, 20);
 			this->email->TabIndex = 62;
 			// 
 			// mobileno
@@ -726,10 +677,29 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// lastname
 			// 
+			this->lastname->BackColor = System::Drawing::Color::White;
+			this->lastname->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->lastname->Location = System::Drawing::Point(149, 88);
 			this->lastname->Name = L"lastname";
 			this->lastname->Size = System::Drawing::Size(125, 20);
 			this->lastname->TabIndex = 59;
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->AllowUserToAddRows = false;
+			this->dataGridView2->AllowUserToDeleteRows = false;
+			this->dataGridView2->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dataGridView2->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::DisplayedCells;
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->EditMode = System::Windows::Forms::DataGridViewEditMode::EditProgrammatically;
+			this->dataGridView2->Location = System::Drawing::Point(557, 61);
+			this->dataGridView2->MultiSelect = false;
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->ReadOnly = true;
+			this->dataGridView2->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->dataGridView2->Size = System::Drawing::Size(288, 241);
+			this->dataGridView2->TabIndex = 102;
+			this->dataGridView2->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm1::dataGridView2_CellClick);
 			// 
 			// pictureBox1
 			// 
@@ -748,7 +718,7 @@ private: System::ComponentModel::IContainer^  components;
 				L"baked_toast", L"burger", L"coffee", L"desert",
 					L"icecream", L"pasta", L"pizza", L"potato", L"sandwitch", L"smoothes", L"soup"
 			});
-			this->comboproducts->Location = System::Drawing::Point(1110, 334);
+			this->comboproducts->Location = System::Drawing::Point(1179, 399);
 			this->comboproducts->Name = L"comboproducts";
 			this->comboproducts->Size = System::Drawing::Size(171, 21);
 			this->comboproducts->TabIndex = 63;
@@ -759,7 +729,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			this->labot->AutoSize = true;
 			this->labot->BackColor = System::Drawing::SystemColors::Window;
-			this->labot->Location = System::Drawing::Point(1119, 337);
+			this->labot->Location = System::Drawing::Point(1185, 402);
 			this->labot->Name = L"labot";
 			this->labot->Size = System::Drawing::Size(111, 13);
 			this->labot->TabIndex = 64;
@@ -784,14 +754,14 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// txtname
 			// 
-			this->txtname->Location = System::Drawing::Point(923, 300);
+			this->txtname->Location = System::Drawing::Point(870, 378);
 			this->txtname->Name = L"txtname";
 			this->txtname->Size = System::Drawing::Size(162, 20);
 			this->txtname->TabIndex = 66;
 			// 
 			// btnupdate
 			// 
-			this->btnupdate->Location = System::Drawing::Point(935, 333);
+			this->btnupdate->Location = System::Drawing::Point(917, 442);
 			this->btnupdate->Name = L"btnupdate";
 			this->btnupdate->Size = System::Drawing::Size(75, 23);
 			this->btnupdate->TabIndex = 68;
@@ -801,7 +771,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btnadd
 			// 
-			this->btnadd->Location = System::Drawing::Point(1029, 332);
+			this->btnadd->Location = System::Drawing::Point(1029, 442);
 			this->btnadd->Name = L"btnadd";
 			this->btnadd->Size = System::Drawing::Size(75, 23);
 			this->btnadd->TabIndex = 69;
@@ -811,15 +781,15 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// txtprice
 			// 
-			this->txtprice->Location = System::Drawing::Point(1122, 300);
+			this->txtprice->Location = System::Drawing::Point(1072, 378);
 			this->txtprice->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 100000, 0, 0, 0 });
 			this->txtprice->Name = L"txtprice";
-			this->txtprice->Size = System::Drawing::Size(142, 20);
+			this->txtprice->Size = System::Drawing::Size(61, 20);
 			this->txtprice->TabIndex = 70;
 			// 
 			// btnburger
 			// 
-			this->btnburger->Location = System::Drawing::Point(935, 337);
+			this->btnburger->Location = System::Drawing::Point(917, 438);
 			this->btnburger->Name = L"btnburger";
 			this->btnburger->Size = System::Drawing::Size(75, 23);
 			this->btnburger->TabIndex = 71;
@@ -829,7 +799,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btnsmoothes
 			// 
-			this->btnsmoothes->Location = System::Drawing::Point(935, 337);
+			this->btnsmoothes->Location = System::Drawing::Point(917, 442);
 			this->btnsmoothes->Name = L"btnsmoothes";
 			this->btnsmoothes->Size = System::Drawing::Size(75, 23);
 			this->btnsmoothes->TabIndex = 72;
@@ -839,7 +809,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btnsandwitch
 			// 
-			this->btnsandwitch->Location = System::Drawing::Point(935, 337);
+			this->btnsandwitch->Location = System::Drawing::Point(917, 442);
 			this->btnsandwitch->Name = L"btnsandwitch";
 			this->btnsandwitch->Size = System::Drawing::Size(75, 23);
 			this->btnsandwitch->TabIndex = 73;
@@ -849,7 +819,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btnpotato
 			// 
-			this->btnpotato->Location = System::Drawing::Point(935, 334);
+			this->btnpotato->Location = System::Drawing::Point(917, 438);
 			this->btnpotato->Name = L"btnpotato";
 			this->btnpotato->Size = System::Drawing::Size(75, 23);
 			this->btnpotato->TabIndex = 74;
@@ -859,7 +829,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btnpasta
 			// 
-			this->btnpasta->Location = System::Drawing::Point(935, 333);
+			this->btnpasta->Location = System::Drawing::Point(917, 438);
 			this->btnpasta->Name = L"btnpasta";
 			this->btnpasta->Size = System::Drawing::Size(75, 23);
 			this->btnpasta->TabIndex = 75;
@@ -869,7 +839,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btnpizza
 			// 
-			this->btnpizza->Location = System::Drawing::Point(935, 332);
+			this->btnpizza->Location = System::Drawing::Point(917, 438);
 			this->btnpizza->Name = L"btnpizza";
 			this->btnpizza->Size = System::Drawing::Size(75, 23);
 			this->btnpizza->TabIndex = 76;
@@ -879,7 +849,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btndesert
 			// 
-			this->btndesert->Location = System::Drawing::Point(935, 332);
+			this->btndesert->Location = System::Drawing::Point(917, 438);
 			this->btndesert->Name = L"btndesert";
 			this->btndesert->Size = System::Drawing::Size(75, 23);
 			this->btndesert->TabIndex = 77;
@@ -889,7 +859,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btnicecream
 			// 
-			this->btnicecream->Location = System::Drawing::Point(935, 333);
+			this->btnicecream->Location = System::Drawing::Point(917, 438);
 			this->btnicecream->Name = L"btnicecream";
 			this->btnicecream->Size = System::Drawing::Size(75, 23);
 			this->btnicecream->TabIndex = 78;
@@ -899,7 +869,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btncoffee
 			// 
-			this->btncoffee->Location = System::Drawing::Point(935, 334);
+			this->btncoffee->Location = System::Drawing::Point(917, 438);
 			this->btncoffee->Name = L"btncoffee";
 			this->btncoffee->Size = System::Drawing::Size(75, 23);
 			this->btncoffee->TabIndex = 79;
@@ -909,7 +879,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// btnsoup
 			// 
-			this->btnsoup->Location = System::Drawing::Point(935, 334);
+			this->btnsoup->Location = System::Drawing::Point(917, 438);
 			this->btnsoup->Name = L"btnsoup";
 			this->btnsoup->Size = System::Drawing::Size(75, 23);
 			this->btnsoup->TabIndex = 80;
@@ -919,7 +889,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// butburger
 			// 
-			this->butburger->Location = System::Drawing::Point(1029, 332);
+			this->butburger->Location = System::Drawing::Point(1029, 442);
 			this->butburger->Name = L"butburger";
 			this->butburger->Size = System::Drawing::Size(75, 23);
 			this->butburger->TabIndex = 81;
@@ -929,7 +899,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// butcoffee
 			// 
-			this->butcoffee->Location = System::Drawing::Point(1029, 334);
+			this->butcoffee->Location = System::Drawing::Point(1029, 442);
 			this->butcoffee->Name = L"butcoffee";
 			this->butcoffee->Size = System::Drawing::Size(75, 23);
 			this->butcoffee->TabIndex = 82;
@@ -939,7 +909,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// buticecream
 			// 
-			this->buticecream->Location = System::Drawing::Point(1029, 332);
+			this->buticecream->Location = System::Drawing::Point(1029, 442);
 			this->buticecream->Name = L"buticecream";
 			this->buticecream->Size = System::Drawing::Size(75, 23);
 			this->buticecream->TabIndex = 83;
@@ -949,7 +919,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// butsmoothes
 			// 
-			this->butsmoothes->Location = System::Drawing::Point(1029, 334);
+			this->butsmoothes->Location = System::Drawing::Point(1029, 442);
 			this->butsmoothes->Name = L"butsmoothes";
 			this->butsmoothes->Size = System::Drawing::Size(75, 23);
 			this->butsmoothes->TabIndex = 84;
@@ -959,7 +929,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// butpizza
 			// 
-			this->butpizza->Location = System::Drawing::Point(1029, 334);
+			this->butpizza->Location = System::Drawing::Point(1029, 442);
 			this->butpizza->Name = L"butpizza";
 			this->butpizza->Size = System::Drawing::Size(75, 23);
 			this->butpizza->TabIndex = 85;
@@ -969,7 +939,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// butdesert
 			// 
-			this->butdesert->Location = System::Drawing::Point(1029, 332);
+			this->butdesert->Location = System::Drawing::Point(1029, 442);
 			this->butdesert->Name = L"butdesert";
 			this->butdesert->Size = System::Drawing::Size(75, 23);
 			this->butdesert->TabIndex = 86;
@@ -979,7 +949,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// butsandwitch
 			// 
-			this->butsandwitch->Location = System::Drawing::Point(1029, 333);
+			this->butsandwitch->Location = System::Drawing::Point(1029, 442);
 			this->butsandwitch->Name = L"butsandwitch";
 			this->butsandwitch->Size = System::Drawing::Size(75, 23);
 			this->butsandwitch->TabIndex = 87;
@@ -989,7 +959,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// butpotato
 			// 
-			this->butpotato->Location = System::Drawing::Point(1029, 337);
+			this->butpotato->Location = System::Drawing::Point(1029, 442);
 			this->butpotato->Name = L"butpotato";
 			this->butpotato->Size = System::Drawing::Size(75, 23);
 			this->butpotato->TabIndex = 88;
@@ -999,7 +969,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// butpasta
 			// 
-			this->butpasta->Location = System::Drawing::Point(1029, 332);
+			this->butpasta->Location = System::Drawing::Point(1029, 442);
 			this->butpasta->Name = L"butpasta";
 			this->butpasta->Size = System::Drawing::Size(75, 23);
 			this->butpasta->TabIndex = 89;
@@ -1009,7 +979,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// butsoup
 			// 
-			this->butsoup->Location = System::Drawing::Point(1029, 334);
+			this->butsoup->Location = System::Drawing::Point(1029, 442);
 			this->butsoup->Name = L"butsoup";
 			this->butsoup->Size = System::Drawing::Size(75, 23);
 			this->butsoup->TabIndex = 90;
@@ -1019,7 +989,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bbaked_toast
 			// 
-			this->bbaked_toast->Location = System::Drawing::Point(984, 382);
+			this->bbaked_toast->Location = System::Drawing::Point(971, 486);
 			this->bbaked_toast->Name = L"bbaked_toast";
 			this->bbaked_toast->Size = System::Drawing::Size(75, 23);
 			this->bbaked_toast->TabIndex = 91;
@@ -1029,7 +999,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bburger
 			// 
-			this->bburger->Location = System::Drawing::Point(984, 382);
+			this->bburger->Location = System::Drawing::Point(971, 486);
 			this->bburger->Name = L"bburger";
 			this->bburger->Size = System::Drawing::Size(75, 23);
 			this->bburger->TabIndex = 92;
@@ -1039,7 +1009,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bdesert
 			// 
-			this->bdesert->Location = System::Drawing::Point(984, 382);
+			this->bdesert->Location = System::Drawing::Point(969, 487);
 			this->bdesert->Name = L"bdesert";
 			this->bdesert->Size = System::Drawing::Size(75, 23);
 			this->bdesert->TabIndex = 93;
@@ -1049,7 +1019,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bsoup
 			// 
-			this->bsoup->Location = System::Drawing::Point(984, 382);
+			this->bsoup->Location = System::Drawing::Point(971, 492);
 			this->bsoup->Name = L"bsoup";
 			this->bsoup->Size = System::Drawing::Size(75, 23);
 			this->bsoup->TabIndex = 94;
@@ -1059,7 +1029,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bicecream
 			// 
-			this->bicecream->Location = System::Drawing::Point(984, 382);
+			this->bicecream->Location = System::Drawing::Point(969, 492);
 			this->bicecream->Name = L"bicecream";
 			this->bicecream->Size = System::Drawing::Size(75, 23);
 			this->bicecream->TabIndex = 95;
@@ -1069,7 +1039,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bpasta
 			// 
-			this->bpasta->Location = System::Drawing::Point(984, 382);
+			this->bpasta->Location = System::Drawing::Point(969, 492);
 			this->bpasta->Name = L"bpasta";
 			this->bpasta->Size = System::Drawing::Size(75, 23);
 			this->bpasta->TabIndex = 96;
@@ -1079,7 +1049,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bpizza
 			// 
-			this->bpizza->Location = System::Drawing::Point(984, 382);
+			this->bpizza->Location = System::Drawing::Point(969, 489);
 			this->bpizza->Name = L"bpizza";
 			this->bpizza->Size = System::Drawing::Size(75, 23);
 			this->bpizza->TabIndex = 97;
@@ -1089,7 +1059,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bpotato
 			// 
-			this->bpotato->Location = System::Drawing::Point(984, 382);
+			this->bpotato->Location = System::Drawing::Point(969, 492);
 			this->bpotato->Name = L"bpotato";
 			this->bpotato->Size = System::Drawing::Size(75, 23);
 			this->bpotato->TabIndex = 98;
@@ -1099,7 +1069,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bsandwitch
 			// 
-			this->bsandwitch->Location = System::Drawing::Point(984, 382);
+			this->bsandwitch->Location = System::Drawing::Point(969, 492);
 			this->bsandwitch->Name = L"bsandwitch";
 			this->bsandwitch->Size = System::Drawing::Size(75, 23);
 			this->bsandwitch->TabIndex = 99;
@@ -1109,7 +1079,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bsmoothe
 			// 
-			this->bsmoothe->Location = System::Drawing::Point(984, 382);
+			this->bsmoothe->Location = System::Drawing::Point(969, 489);
 			this->bsmoothe->Name = L"bsmoothe";
 			this->bsmoothe->Size = System::Drawing::Size(75, 23);
 			this->bsmoothe->TabIndex = 100;
@@ -1119,7 +1089,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// bcoffee
 			// 
-			this->bcoffee->Location = System::Drawing::Point(984, 382);
+			this->bcoffee->Location = System::Drawing::Point(971, 492);
 			this->bcoffee->Name = L"bcoffee";
 			this->bcoffee->Size = System::Drawing::Size(75, 23);
 			this->bcoffee->TabIndex = 101;
@@ -1129,12 +1099,12 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// timer1
 			// 
-			this->timer1->Interval = 1000;
+			this->timer1->Interval = 1300;
 			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm1::timer1_Tick);
 			// 
 			// btnoffer
 			// 
-			this->btnoffer->Location = System::Drawing::Point(571, 431);
+			this->btnoffer->Location = System::Drawing::Point(610, 486);
 			this->btnoffer->Name = L"btnoffer";
 			this->btnoffer->Size = System::Drawing::Size(75, 23);
 			this->btnoffer->TabIndex = 103;
@@ -1148,7 +1118,7 @@ private: System::ComponentModel::IContainer^  components;
 			this->laoffer->BackColor = System::Drawing::Color::White;
 			this->laoffer->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->laoffer->Location = System::Drawing::Point(567, 320);
+			this->laoffer->Location = System::Drawing::Point(606, 375);
 			this->laoffer->Name = L"laoffer";
 			this->laoffer->Size = System::Drawing::Size(57, 21);
 			this->laoffer->TabIndex = 103;
@@ -1156,7 +1126,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// txtemail
 			// 
-			this->txtemail->Location = System::Drawing::Point(571, 356);
+			this->txtemail->Location = System::Drawing::Point(610, 411);
 			this->txtemail->Name = L"txtemail";
 			this->txtemail->ReadOnly = true;
 			this->txtemail->Size = System::Drawing::Size(216, 20);
@@ -1164,7 +1134,7 @@ private: System::ComponentModel::IContainer^  components;
 			// 
 			// numoffer
 			// 
-			this->numoffer->Location = System::Drawing::Point(571, 399);
+			this->numoffer->Location = System::Drawing::Point(610, 454);
 			this->numoffer->Name = L"numoffer";
 			this->numoffer->Size = System::Drawing::Size(120, 20);
 			this->numoffer->TabIndex = 105;
@@ -1223,12 +1193,10 @@ private: System::ComponentModel::IContainer^  components;
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->employeetable);
 			this->Controls->Add(this->la1login);
-			this->Controls->Add(this->lacontact);
 			this->Controls->Add(this->laabout);
 			this->Controls->Add(this->lamenu);
 			this->Controls->Add(this->lalogin);
 			this->Controls->Add(this->la1about);
-			this->Controls->Add(this->la1contct);
 			this->Controls->Add(this->la1menu);
 			this->Name = L"MyForm1";
 			this->Text = L"Admin";
@@ -1392,15 +1360,23 @@ private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs
 	int l9 = empdateofjoin->Trim()->Length;
 	if (l1>2&&l2>2&&l3>2&&l4>2&&l5>2&&l6>2&&l7>2&&l8>2&&l9>2) {
 		if (rlast) {
+			lastname->BackColor = Color::White;
 			if (rname) {
+				firstname->BackColor = Color::White;
 				if (rmobile) {
+					mobileno->BackColor = Color::White;
 					if (rmail) {
+						email->BackColor = Color::White;
 						if (address->Trim()->Length > 2) {
+							emp_address->BackColor = Color::White;
 							if (rcity) {
+								emp_city->BackColor = Color::White;
 								if (rdate) {
+									dateofjoin->BackColor = Color::White;
 									if (rsalary) {
+										salary->BackColor = Color::White;
 										if (rpass) {
-											
+											password->BackColor = Color::White;
 											int k = 0;
 											String^ select = "select * from emp where password1=@pass ";
 											MySqlCommand^ cmdselect = gcnew MySqlCommand(select, conn);
@@ -1498,66 +1474,229 @@ values(@emp_id,@lastname,@firstname,@mobile_no,@email,@address,@city,@date_of_jo
 															MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 															conn->Close();
 														}
+
+														password->Text = "";
+														lastname->Text = "";
+														firstname->Text = "";
+														email->Text = "";
+														mobileno->Text = "";
+														emp_city->Text = "";
+														emp_address->Text = "";
+														dateofjoin->Text = "";
+														salary->Text = "";
+														password->Text = "";
+
 													}
 													else {
+														password->BackColor = Color::Red;
 														MessageBox::Show("Password is already exits\n change password", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 
 													}
 												}
 												else {
-													MessageBox::Show("Email address is already exits\n change password", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+													email->BackColor = Color::Red;
+													MessageBox::Show("Email address is already exits\n", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 
 												}
 											}
 											else {
-												MessageBox::Show("mobile number is already exits\n change password", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+												mobileno->BackColor = Color::Red;
+												MessageBox::Show("mobile number is already exits\n mobile no must consists of only 10 digit", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 
 											}
 										}
 										else {
+										password->BackColor = Color::Red;
 											MessageBox::Show("password must consists of letter \ndigit and \n@,#,~,% spacial symbol", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 										}
 									}
 									else {
+									salary->BackColor = Color::Red;
 										MessageBox::Show("only 5 figer salary is accepted..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 									}
 								}
 								else {
+								dateofjoin->BackColor = Color::Red;
 									MessageBox::Show("date must be in dd/mm/yyyy..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 								}
 							}
 							else {
+							  emp_city->BackColor = Color::Red;
 								MessageBox::Show("check City..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 							}
 						}
 						else {
+						emp_address->BackColor = Color::Red;
 							MessageBox::Show("Address is invalid..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 						}
 					}
 					else
 					{
+					email->BackColor = Color::Red;
 						MessageBox::Show("Enter valid email", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 					}
 				}
 				else {
+				mobileno->BackColor = Color::Red;
 					MessageBox::Show("check mobile no..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 				}
 			}
-			else { MessageBox::Show("check fist name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop); }
+			else {
+			firstname->BackColor = Color::Red;
+			MessageBox::Show("check fist name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop); }
 		}
 		else {
+		lastname->BackColor = Color::Red;
 			MessageBox::Show("check last name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		}
 	}else{
-		MessageBox::Show("you left something all fields \n are mandatory", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+	lastname->BackColor = Color::Red;
+	firstname->BackColor = Color::Red;
+	email->BackColor = Color::Red;
+	mobileno->BackColor = Color::Red;
+	emp_city->BackColor = Color::Red;
+	emp_address->BackColor = Color::Red;
+	dateofjoin->BackColor = Color::Red;
+	salary->BackColor = Color::Red;
+	password->BackColor = Color::Red;
+		MessageBox::Show("you left something \nall fields \n are mandatory", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 	}
 }
 String^msg;
 private: System::Void butupdate_Click(System::Object^  sender, System::EventArgs^  e) {
-	eid->Visible = true;
-	txtid->Visible = true;
-	butok->Visible = true;
-	button2->Visible = false;
+	String^ last = lastname->Text;
+	String^ name_check = "^([A-z]+)$";
+	String ^ mobilenocheck = "^[6-8]([0-9]){9}$";
+	String^ emailcheck = "^[a-z]+[0-9]*@[a-z]+.[a-z]+$";
+	String^ salarycheck = "^[1-9][0-9]{2,4}$";
+	String^ passwordcheck = "^[A-z]*[0-9]*(@|~|%|#)+[A-z]*[0-9]*$";
+	String^ datecheck = "^([1-2][0-9]{0,1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
+	String^ first = firstname->Text;
+	Regex^ regxn = gcnew Regex(name_check);
+	bool rname = regxn->IsMatch(first);
+	bool rlast = regxn->IsMatch(last);
+	String^ address = emp_address->Text;
+	//Regex^ regxadd = gcnew Regex();
+	String^ city = emp_city->Text;
+	bool rcity = regxn->IsMatch(city);
+	String^ empmobile = mobileno->Text;
+	Regex^ regxmobo = gcnew Regex(mobilenocheck);
+	bool rmobile = regxmobo->IsMatch(empmobile);
+	String^ empemail = email->Text;
+	Regex^ regxmail = gcnew Regex(emailcheck);
+	bool rmail = regxmail->IsMatch(empemail);
+	String^ empsalary = salary->Text;
+	Regex^ regxsalary = gcnew Regex(salarycheck);
+	bool rsalary = regxsalary->IsMatch(empsalary);
+	String^ emppassword = password->Text;
+	Regex^ regxpass = gcnew Regex(passwordcheck);
+	bool rpass = regxpass->IsMatch(emppassword);
+	String^ empdateofjoin = dateofjoin->Text;
+	Regex^ regxdateof = gcnew Regex(datecheck);
+	bool rdate = regxdateof->IsMatch(empdateofjoin);
+	int l1 = last->Trim()->Length;
+	int l2 = first->Trim()->Length;
+	int l3 = address->Trim()->Length;
+	int l4 = city->Trim()->Length;
+	int l5 = empmobile->Trim()->Length;
+	int l6 = empemail->Trim()->Length;
+	int l7 = empsalary->Trim()->Length;
+	int l8 = emppassword->Trim()->Length;
+	int l9 = empdateofjoin->Trim()->Length;
+
+	if (l1 > 2 && l2 > 2 && l3 > 2 && l4 > 2 && l5 > 2 && l6 > 2 && l7 > 2 && l8 > 2 && l9 > 2) {
+		if (rlast) {
+			lastname->BackColor = Color::White;
+			if (rname) {
+				firstname->BackColor = Color::White;
+				if (rmobile) {
+					mobileno->BackColor = Color::White;
+					if (rmail) {
+						email->BackColor = Color::White;
+						if (address->Trim()->Length > 2) {
+							emp_address->BackColor = Color::White;
+							if (rcity) {
+								emp_city->BackColor = Color::White;
+								if (rdate) {
+									dateofjoin->BackColor = Color::White;
+									if (rsalary) {
+										salary->BackColor = Color::White;
+										if (rpass) {
+											password->ReadOnly = true;
+											lastname->ReadOnly = true;
+											firstname->ReadOnly = true;
+											email->ReadOnly = true;
+											mobileno->ReadOnly = true;
+											emp_city->ReadOnly = true;
+											emp_address->ReadOnly = true;
+											dateofjoin->ReadOnly = true;
+											salary->ReadOnly = true;
+											password->ReadOnly = true;
+											eid->Visible = true;
+											txtid->Visible = true;
+											butok->Visible = true;
+											button2->Visible = false;
+										}
+else {
+										password->BackColor = Color::Red;
+										MessageBox::Show("password must consists of letter \ndigit and \n@,#,~,% spacial symbol", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+									}
+								}
+								else {
+									salary->BackColor = Color::Red;
+									MessageBox::Show("only 5 figer salary is accepted..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+								}
+							}
+							else {
+								dateofjoin->BackColor = Color::Red;
+								MessageBox::Show("date must be in dd/mm/yyyy..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+							}
+						}
+						else {
+							emp_city->BackColor = Color::Red;
+							MessageBox::Show("check City..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+						}
+					}
+					else {
+						emp_address->BackColor = Color::Red;
+						MessageBox::Show("Address is invalid..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+					}
+				}
+				else
+				{
+					email->BackColor = Color::Red;
+					MessageBox::Show("Enter valid email", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+				}
+			}
+			else {
+				mobileno->BackColor = Color::Red;
+				MessageBox::Show("check mobile no..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+			}
+		}
+		else { 
+			firstname->BackColor = Color::Red;
+			MessageBox::Show("check fist name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop); }
+	}
+	else {
+		lastname->BackColor = Color::Red;
+		MessageBox::Show("check last name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+	}
+	}
+	else {
+		lastname->BackColor = Color::Red;
+		firstname->BackColor = Color::Red;
+		email->BackColor = Color::Red;
+		mobileno->BackColor = Color::Red;
+		emp_city->BackColor = Color::Red;
+		emp_address->BackColor = Color::Red;
+		dateofjoin->BackColor = Color::Red;
+		salary->BackColor = Color::Red;
+		password->BackColor = Color::Red;
+		MessageBox::Show("you left something...\n all fields are mandatory", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+	}
+
+
+
 }
 private: System::Void butok_Click(System::Object^  sender, System::EventArgs^  e) {
 	 
@@ -1605,14 +1744,23 @@ private: System::Void butok_Click(System::Object^  sender, System::EventArgs^  e
 	MySqlConnection^ conn = gcnew MySqlConnection(connstring);
 	if (l1 > 2 && l2 > 2 && l3 > 2 && l4 > 2 && l5 > 2 && l6 > 2 && l7 > 2 && l8 > 2 && l9 > 2) {
 	if (rlast) {
+		lastname->BackColor = Color::White;
 		if (rname) {
+			firstname->BackColor = Color::White;
 			if (rmobile) {
+				mobileno->BackColor = Color::White;
 				if (rmail) {
+					email->BackColor = Color::White;
 					if (address->Trim()->Length > 2) {
+						emp_address->BackColor = Color::White;
 						if (rcity) {
+							emp_city->BackColor = Color::White;
 							if (rdate) {
+								dateofjoin->BackColor = Color::White;
 								if (rsalary) {
+									salary->BackColor = Color::White;
 									if (rpass) {
+										
 		try {
 			conn->Open();
 			String^ cmdstring = "UPDATE 	emp set lastname=@lastname, firstname=@firstname,mobile_no=@mobile_no,email=@email,address=@address,city=@city,date_of_join=@date_of_join\
@@ -1636,52 +1784,230 @@ private: System::Void butok_Click(System::Object^  sender, System::EventArgs^  e
 			MessageBox::Show(e->ToString(), "Stop Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			conn->Close();
 		}
+
+
+		password->Text = "";
+		lastname->Text = "";
+		firstname->Text = "";
+		email->Text = "";
+		mobileno->Text = "";
+		emp_city->Text = "";
+		emp_address->Text = "";
+		dateofjoin->Text = "";
+		salary->Text = "";
+		password->Text = "";
+		txtid->Text = "";
+
+		password->ReadOnly = false;
+		lastname->ReadOnly = false;
+		firstname->ReadOnly = false;
+		email->ReadOnly = false;
+		mobileno->ReadOnly = false;
+		emp_city->ReadOnly = false;
+		emp_address->ReadOnly = false;
+		dateofjoin->ReadOnly = false;
+		salary->ReadOnly = false;
+		password->ReadOnly = false;
+
 									}
 									else {
+										password->BackColor = Color::Red;
 										MessageBox::Show("password must consists of letter \ndigit and \n@,#,~,% spacial symbol", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 									}
 								}
 								else {
+									salary->BackColor = Color::Red;
 									MessageBox::Show("only 5 figer salary is accepted..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 								}
 							}
 							else {
+								dateofjoin->BackColor = Color::Red;
 								MessageBox::Show("date must be in dd/mm/yyyy..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 							}
 						}
 						else {
+							emp_city->BackColor = Color::Red;
 							MessageBox::Show("check City..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 						}
 					}
 					else {
+						emp_address->BackColor = Color::Red;
 						MessageBox::Show("Address is invalid..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 					}
 				}
 				else
 				{
+					email->BackColor = Color::Red;
 					MessageBox::Show("Enter valid email", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 				}
 			}
 			else {
+				mobileno->BackColor = Color::Red;
 				MessageBox::Show("check mobile no..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 			}
 		}
-		else { MessageBox::Show("check fist name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop); }
+		else { 
+			firstname->BackColor = Color::Red;
+			MessageBox::Show("check fist name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop); }
 	}
 	else {
+		lastname->BackColor = Color::Red;
 		MessageBox::Show("check last name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 	}
 	}
 	else {
-		MessageBox::Show("you left something all fields \n are mandatory", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+		lastname->BackColor = Color::Red;
+		firstname->BackColor = Color::Red;
+		email->BackColor = Color::Red;
+		mobileno->BackColor = Color::Red;
+		emp_city->BackColor = Color::Red;
+		emp_address->BackColor = Color::Red;
+		dateofjoin->BackColor = Color::Red;
+		salary->BackColor = Color::Red;
+		password->BackColor = Color::Red;
+		MessageBox::Show("you left something...\n all fields are mandatory", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 	}
 
 }
 private: System::Void butdelete_Click(System::Object^  sender, System::EventArgs^  e) {
+	String^ last = lastname->Text;
+	String^ name_check = "^([A-z]+)$";
+	String ^ mobilenocheck = "^[6-8]([0-9]){9}$";
+	String^ emailcheck = "^[a-z]+[0-9]*@[a-z]+.[a-z]+$";
+	String^ salarycheck = "^[1-9][0-9]{2,4}$";
+	String^ passwordcheck = "^[A-z]*[0-9]*(@|~|%|#)+[A-z]*[0-9]*$";
+	String^ datecheck = "^([1-2][0-9]{0,1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
+	String^ first = firstname->Text;
+	Regex^ regxn = gcnew Regex(name_check);
+	bool rname = regxn->IsMatch(first);
+	bool rlast = regxn->IsMatch(last);
+	String^ address = emp_address->Text;
+	//Regex^ regxadd = gcnew Regex();
+	String^ city = emp_city->Text;
+	bool rcity = regxn->IsMatch(city);
+	String^ empmobile = mobileno->Text;
+	Regex^ regxmobo = gcnew Regex(mobilenocheck);
+	bool rmobile = regxmobo->IsMatch(empmobile);
+	String^ empemail = email->Text;
+	Regex^ regxmail = gcnew Regex(emailcheck);
+	bool rmail = regxmail->IsMatch(empemail);
+	String^ empsalary = salary->Text;
+	Regex^ regxsalary = gcnew Regex(salarycheck);
+	bool rsalary = regxsalary->IsMatch(empsalary);
+	String^ emppassword = password->Text;
+	Regex^ regxpass = gcnew Regex(passwordcheck);
+	bool rpass = regxpass->IsMatch(emppassword);
+	String^ empdateofjoin = dateofjoin->Text;
+	Regex^ regxdateof = gcnew Regex(datecheck);
+	bool rdate = regxdateof->IsMatch(empdateofjoin);
+	int l1 = last->Trim()->Length;
+	int l2 = first->Trim()->Length;
+	int l3 = address->Trim()->Length;
+	int l4 = city->Trim()->Length;
+	int l5 = empmobile->Trim()->Length;
+	int l6 = empemail->Trim()->Length;
+	int l7 = empsalary->Trim()->Length;
+	int l8 = emppassword->Trim()->Length;
+	int l9 = empdateofjoin->Trim()->Length;
+
+
+	if (l1 > 2 && l2 > 2 && l3 > 2 && l4 > 2 && l5 > 2 && l6 > 2 && l7 > 2 && l8 > 2 && l9 > 2) {
+		if (rlast) {
+			lastname->BackColor = Color::White;
+			if (rname) {
+				firstname->BackColor = Color::White;
+				if (rmobile) {
+					mobileno->BackColor = Color::White;
+					if (rmail) {
+						email->BackColor = Color::White;
+						if (address->Trim()->Length > 2) {
+							emp_address->BackColor = Color::White;
+							if (rcity) {
+								emp_city->BackColor = Color::White;
+								if (rdate) {
+									dateofjoin->BackColor = Color::White;
+									if (rsalary) {
+										salary->BackColor = Color::White;
+										if (rpass) {
+											password->ReadOnly = true;
+											lastname->ReadOnly = true;
+											firstname->ReadOnly = true;
+											email->ReadOnly = true;
+											mobileno->ReadOnly = true;
+											emp_city->ReadOnly = true;
+											emp_address->ReadOnly = true;
+											dateofjoin->ReadOnly = true;
+											salary->ReadOnly = true;
+											password->ReadOnly = true;
+
+
 	eid->Visible = true;
 	txtid->Visible = true;
 	butok->Visible = false;
 	button2->Visible = true;
+
+}
+else {
+password->BackColor = Color::Red;
+MessageBox::Show("password must consists of letter \ndigit and \n@,#,~,% spacial symbol", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+									}
+								}
+								else {
+								salary->BackColor = Color::Red;
+								MessageBox::Show("only 5 figer salary is accepted..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+								}
+							}
+							else {
+							dateofjoin->BackColor = Color::Red;
+							MessageBox::Show("date must be in dd/mm/yyyy..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+							}
+						}
+						else {
+						emp_city->BackColor = Color::Red;
+						MessageBox::Show("check City..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+						}
+					}
+					else {
+					emp_address->BackColor = Color::Red;
+					MessageBox::Show("Address is invalid..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+					}
+				}
+				else
+				{
+				email->BackColor = Color::Red;
+				MessageBox::Show("Enter valid email", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+				}
+			}
+			else {
+			mobileno->BackColor = Color::Red;
+			MessageBox::Show("check mobile no..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+			}
+		}
+		else {
+		firstname->BackColor = Color::Red;
+		MessageBox::Show("check fist name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+ }
+	}
+	else {
+	lastname->BackColor = Color::Red;
+	MessageBox::Show("check last name..", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+	}
+	}
+	else {
+	lastname->BackColor = Color::Red;
+	firstname->BackColor = Color::Red;
+	email->BackColor = Color::Red;
+	mobileno->BackColor = Color::Red;
+	emp_city->BackColor = Color::Red;
+	emp_address->BackColor = Color::Red;
+	dateofjoin->BackColor = Color::Red;
+	salary->BackColor = Color::Red;
+	password->BackColor = Color::Red;
+	MessageBox::Show("you left something...\n all fields are mandatory", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+	}
+
+
+
 }
 private: System::Void employeetable_CellClick(System::Object^  sender, System::Windows::Forms::DataGridViewCellEventArgs^  e) {
 	String^ emp_id1 = employeetable->Rows[employeetable->CurrentCell->RowIndex]->Cells[1]->Value->ToString();
@@ -1725,23 +2051,97 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 	}
 }
 
-		 /*void vicustomer() {
+		 void viproduct() {
+			 btnsoup->Visible = true;
+			 btnupdate->Visible = true;
+			 btnicecream->Visible = true;
+			 btncoffee->Visible = true;
+			 btndesert->Visible = true;
+			 btnpasta->Visible = true;
+			 btnburger->Visible = true;
+			 btnsmoothes->Visible = true;
+			 btnsandwitch->Visible = true;
+			 btnpizza->Visible = true;
+			 btnpotato->Visible = true;
+			 //////////
+			 bsoup->Visible = true;
+			 bbaked_toast->Visible = true;
+			 bicecream->Visible = true;
+			 bcoffee->Visible = true;
+			 bdesert->Visible = true;
+			 bpasta->Visible = true;
+			 bburger->Visible = true;
+			 bsmoothe->Visible = true;
+			 bsandwitch->Visible = true;
+			 bpizza->Visible = true;
+			 bpotato->Visible = true;
+			 ///////////
+			 butsoup->Visible = true;
+			 btnadd->Visible = true;
+			 buticecream->Visible = true;
+			 butcoffee->Visible = true;
+			 butdesert->Visible = true;
+			 butpasta->Visible = true;
+			 butburger->Visible = true;
+			 butsmoothes->Visible = true;
+			 butsandwitch->Visible = true;
+			 butpizza->Visible = true;
+			 butpotato->Visible = true;
+
 		 
 		 }
-		 void vicustomer() {
+		 void noviproduct() {
+			 btnsoup->Visible = false;
+			 btnupdate->Visible = false;
+			 btnicecream->Visible = false;
+			 btncoffee->Visible = false;
+			 btndesert->Visible = false;
+			 btnpasta->Visible = false;
+			 btnburger->Visible = false;
+			 btnsmoothes->Visible = false;
+			 btnsandwitch->Visible = false;
+			 btnpizza->Visible = false;
+			 btnpotato->Visible = false;
 
-		 }*/
+			 //////////
+			 bsoup->Visible = false;
+			 bbaked_toast->Visible = false;
+			 bicecream->Visible = false;
+			 bcoffee->Visible = false;
+			 bdesert->Visible = false;
+			 bpasta->Visible = false;
+			 bburger->Visible = false;
+			 bsmoothe->Visible = false;
+			 bsandwitch->Visible = false;
+			 bpizza->Visible = false;
+			 bpotato->Visible = false;
+			 ///////////
+			 butsoup->Visible = false;
+			 btnadd->Visible = false;
+			 buticecream->Visible = false;
+			 butcoffee->Visible = false;
+			 butdesert->Visible = false;
+			 butpasta->Visible = false;
+			 butburger->Visible = false;
+			 butsmoothes->Visible = false;
+			 butsandwitch->Visible = false;
+			 butpizza->Visible = false;
+			 butpotato->Visible = false;
+
+
+		 }
 
 private: System::Void lamenu_Click(System::Object^  sender, System::EventArgs^  e) {
+	noviproduct();
 	vimenu();
 	dataGridView2->Visible = true;
 	la1menu->Visible = true;
 	lamenu->Visible = false;
 	la1login->Visible = false;
-	la1contct->Visible = false;
+
 	la1about->Visible = false;
 	laabout->Visible = true;
-	lacontact->Visible = true;
+
 	employeetable->Visible = false;
 	panel1->Visible = false;
 	comboproducts->Visible = false;
@@ -1751,17 +2151,18 @@ private: System::Void lamenu_Click(System::Object^  sender, System::EventArgs^  
 		txtprice->Visible = false;
 }
 private: System::Void laabout_Click(System::Object^  sender, System::EventArgs^  e) {
+	noviproduct();
 	novimenu();
 	txtname->Visible = true;
 	txtprice->Visible = true;
 	la1menu->Visible = false;
 	lamenu->Visible = true;
 	la1login->Visible = false;
-	la1contct->Visible = false;
+	
 	la1about->Visible = true;
 	laabout->Visible = false;
 	employeetable->Visible = false;
-	lacontact->Visible = true;
+
 	panel1->Visible = false;
 	comboproducts->Visible = true;
 	dataGridView1->Visible = true;
@@ -1770,12 +2171,12 @@ private: System::Void laabout_Click(System::Object^  sender, System::EventArgs^ 
 
 }
 private: System::Void lacontact_Click(System::Object^  sender, System::EventArgs^  e) {
+	noviproduct();
 	novimenu();
 	la1menu->Visible = false;
 	lamenu->Visible = true;
 	la1login->Visible = false;
-	la1contct->Visible = true;
-	lacontact->Visible = false;
+	
 	la1about->Visible = false;
 	laabout->Visible = true;
 	employeetable->Visible = false;
@@ -1788,12 +2189,12 @@ private: System::Void lacontact_Click(System::Object^  sender, System::EventArgs
 }
 
 private: System::Void lalogin_Click(System::Object^  sender, System::EventArgs^  e) {
+	noviproduct();
 	novimenu();
 	la1menu->Visible = false;
 	lamenu->Visible = true;
 	la1login->Visible = true;
-	la1contct->Visible = false;
-	lacontact->Visible = true;
+	
 	la1about->Visible = false;
 	laabout->Visible = true;
 	employeetable->Visible = true;
@@ -1901,7 +2302,8 @@ private: System::Void btnupdate_Click(System::Object^  sender, System::EventArgs
 	}
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -1953,7 +2355,8 @@ private: System::Void braked_Click(System::Object^  sender, System::EventArgs^  
 	}
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2004,7 +2407,8 @@ private: System::Void btncoffee_Click(System::Object^  sender, System::EventArgs
 	}
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2054,7 +2458,8 @@ private: System::Void btndesert_Click(System::Object^  sender, System::EventArgs
 	}
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2104,6 +2509,8 @@ private: System::Void btnicecream_Click(System::Object^  sender, System::EventAr
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
 	}
+	txtname->Text = "";
+	txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2155,6 +2562,8 @@ private: System::Void btnpasta_Click(System::Object^  sender, System::EventArgs^
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
 	}
+	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2206,6 +2615,8 @@ private: System::Void btnpizza_Click(System::Object^  sender, System::EventArgs^
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
 	}
+	txtname->Text = "";
+	txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2254,7 +2665,8 @@ private: System::Void btnsandwitch_Click(System::Object^  sender, System::EventA
 	}
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2303,7 +2715,8 @@ private: System::Void btnpotato_Click(System::Object^  sender, System::EventArgs
 	}
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2354,6 +2767,8 @@ private: System::Void btnsmoothes_Click(System::Object^  sender, System::EventAr
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
 	}
+	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2404,6 +2819,9 @@ private: System::Void btnsoup_Click(System::Object^  sender, System::EventArgs^ 
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString());
 	}
+	txtname->Text = "";
+	txtprice->Value = 0;
+	
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2533,7 +2951,8 @@ private: System::Void butburger_Click(System::Object^  sender, System::EventArgs
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		conn->Close();
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2599,7 +3018,8 @@ private: System::Void butcoffee_Click(System::Object^  sender, System::EventArgs
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		conn->Close();
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2665,7 +3085,8 @@ private: System::Void butdesert_Click(System::Object^  sender, System::EventArgs
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		conn->Close();
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2731,7 +3152,8 @@ private: System::Void buticecream_Click(System::Object^  sender, System::EventAr
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		conn->Close();
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2797,7 +3219,8 @@ private: System::Void butpasta_Click(System::Object^  sender, System::EventArgs^
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		conn->Close();
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2862,7 +3285,8 @@ private: System::Void butpizza_Click(System::Object^  sender, System::EventArgs^
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		conn->Close();
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2929,7 +3353,8 @@ private: System::Void butpotato_Click(System::Object^  sender, System::EventArgs
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		conn->Close();
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -2997,7 +3422,8 @@ private: System::Void butsandwitch_Click(System::Object^  sender, System::EventA
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		conn->Close();
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -3061,7 +3487,8 @@ private: System::Void butsmoothes_Click(System::Object^  sender, System::EventAr
 	catch (Exception^ e) {
 		MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 		conn->Close();
-	}
+	}	txtname->Text = "";
+	txtprice->Value = 0;
 }
 		else {
 		MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -3130,6 +3557,8 @@ private: System::Void butsoup_Click(System::Object^  sender, System::EventArgs^ 
 				MessageBox::Show(e->ToString(), "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 				conn->Close();
 			}
+			txtname->Text = "";
+			txtprice->Value = 0;
 		}
 		else {
 			MessageBox::Show("you entered wrong price.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -3711,7 +4140,7 @@ private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e
 		MySqlDataReader^ dr = s->ExecuteReader();
 		while (dr->Read()) {
 			p->PlayLooping();
-			if (MessageBox::Show(dr->GetString("email") + "\n" + dr->GetString("orders"), "oder info", MessageBoxButtons::YesNo, MessageBoxIcon::Information) == System::Windows::Forms::DialogResult::Yes) {
+			if (MessageBox::Show(dr->GetString("email") + "\n" + dr->GetString("orders"), "REMINDER", MessageBoxButtons::YesNo, MessageBoxIcon::Information) == System::Windows::Forms::DialogResult::Yes) {
 				p->Stop();
 			}
 		}
@@ -3764,7 +4193,7 @@ private: System::Void btnoffer_Click(System::Object^  sender, System::EventArgs^
 							conn->Open();
 							s->ExecuteNonQuery();
 							conn->Close();
-							MessageBox::Show("Offer conformed", "Success..", MessageBoxButtons::OK, MessageBoxIcon::Information);
+							MessageBox::Show("OFFER CONFIRMED", "OFFER", MessageBoxButtons::OK, MessageBoxIcon::Information);
 						}
 						else {
 							MessageBox::Show("Duplicate record found...", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
@@ -3792,6 +4221,8 @@ private: System::Void btnoffer_Click(System::Object^  sender, System::EventArgs^
 	else {
 		MessageBox::Show("Enter email.", "Stop", MessageBoxButtons::OK, MessageBoxIcon::Stop);
 	}
+	txtemail->Text = "";
+	numoffer->Value = 0;
 }
 };
 }
