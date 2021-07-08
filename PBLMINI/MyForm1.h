@@ -1323,7 +1323,7 @@ private: System::Void button1_Click_1(System::Object^  sender, System::EventArgs
 	String^ emailcheck = "^[a-z]+[0-9]*@[a-z]+.[a-z]+$";
 	String^ salarycheck = "^[1-9][0-9]{2,4}$";
 	String^ passwordcheck = "^[A-z]*[0-9]*(@|~|%|#)+[A-z]*[0-9]*$";
-	String^ datecheck = "^([1-2][0-9]{0,1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
+	String^ datecheck = "^([0-2][0-9]{1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
 
 	int empid = 0;
 	String^ last = lastname->Text;
@@ -1570,7 +1570,7 @@ private: System::Void butupdate_Click(System::Object^  sender, System::EventArgs
 	String^ emailcheck = "^[a-z]+[0-9]*@[a-z]+.[a-z]+$";
 	String^ salarycheck = "^[1-9][0-9]{2,4}$";
 	String^ passwordcheck = "^[A-z]*[0-9]*(@|~|%|#)+[A-z]*[0-9]*$";
-	String^ datecheck = "^([1-2][0-9]{0,1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
+	String^ datecheck = "^([0-2][0-9]{1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
 	String^ first = firstname->Text;
 	Regex^ regxn = gcnew Regex(name_check);
 	bool rname = regxn->IsMatch(first);
@@ -1706,7 +1706,7 @@ private: System::Void butok_Click(System::Object^  sender, System::EventArgs^  e
 	String^ emailcheck ="^[a-z]+[0-9]*@[a-z]+.[a-z]+$";
 	String^ salarycheck ="^[1-9][0-9]{2,4}$";
 	String^ passwordcheck ="^[A-z]*[0-9]*(@|~|%|#)+[A-z]*[0-9]*$";
-	String^ datecheck ="^([1-2][0-9]{0,1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
+	String^ datecheck ="^([0-2][0-9]{1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
 	String^ first = firstname->Text;
 	Regex^ regxn = gcnew Regex(name_check);
 	bool rname = regxn->IsMatch(first);
@@ -1876,7 +1876,7 @@ private: System::Void butdelete_Click(System::Object^  sender, System::EventArgs
 	String^ emailcheck = "^[a-z]+[0-9]*@[a-z]+.[a-z]+$";
 	String^ salarycheck = "^[1-9][0-9]{2,4}$";
 	String^ passwordcheck = "^[A-z]*[0-9]*(@|~|%|#)+[A-z]*[0-9]*$";
-	String^ datecheck = "^([1-2][0-9]{0,1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
+	String^ datecheck = "^([0-2][0-9]{1})*([3][0-1])*(\/|-)([0-9]*[1-2])(\/|-)([0-9][0-9][0-9][0-9])$";
 	String^ first = firstname->Text;
 	Regex^ regxn = gcnew Regex(name_check);
 	bool rname = regxn->IsMatch(first);
