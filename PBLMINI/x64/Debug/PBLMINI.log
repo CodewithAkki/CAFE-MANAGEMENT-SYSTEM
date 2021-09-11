@@ -1,0 +1,16 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2203,5): warning MSB3245: Could not resolve this reference. Could not locate the assembly "MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d". Check to make sure the assembly exists on disk. If this reference is required by your code, you may get compilation errors.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2203,5): warning MSB3243: No way to resolve conflict between "MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" and "MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d". Choosing "MySql.Data, Version=8.0.26.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" arbitrarily.
+  Consider app.config remapping of assembly "MySql.Data, Culture=neutral, PublicKeyToken=c5687fc88969c44d" from Version "8.0.25.0" [] to Version "8.0.26.0" [C:\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll] to solve conflict and get rid of warning.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(2203,5): warning MSB3276: Found conflicts between different versions of the same dependent assembly. Please set the "AutoGenerateBindingRedirects" property to true in the project file. For more information, see http://go.microsoft.com/fwlink/?LinkId=294190.
+  MyForm.cpp
+D:\CAFE-MANAGEMENT\PBLMINI\MyForm1.h(1326,22): warning C4129: '/': unrecognized character escape sequence
+D:\CAFE-MANAGEMENT\PBLMINI\MyForm1.h(1573,22): warning C4129: '/': unrecognized character escape sequence
+D:\CAFE-MANAGEMENT\PBLMINI\MyForm1.h(1709,21): warning C4129: '/': unrecognized character escape sequence
+D:\CAFE-MANAGEMENT\PBLMINI\MyForm1.h(1879,22): warning C4129: '/': unrecognized character escape sequence
+D:\CAFE-MANAGEMENT\PBLMINI\MyForm1.h(1392,30): warning C4101: 'q': unreferenced local variable
+D:\CAFE-MANAGEMENT\PBLMINI\MyForm1.h(1409,30): warning C4101: 'q': unreferenced local variable
+D:\CAFE-MANAGEMENT\PBLMINI\MyForm1.h(1427,30): warning C4101: 'q': unreferenced local variable
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+  Generating Code...
+  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  PBLMINI.vcxproj -> D:\CAFE-MANAGEMENT\x64\Debug\PBLMINI.exe

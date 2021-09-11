@@ -1,0 +1,6 @@
+D:\CAFE-MANAGEMENT\PBLMINI\x64\Debug\PBLMINI.vcxproj.AssemblyReference.cache
+D:\CAFE-MANAGEMENT\PBLMINI\x64\Debug\PBLMINI.MyForm.resources
+D:\CAFE-MANAGEMENT\PBLMINI\x64\Debug\PBLMINI.MyForm1.resources
+D:\CAFE-MANAGEMENT\PBLMINI\x64\Debug\PBLMINI.MyForm2.resources
+D:\CAFE-MANAGEMENT\PBLMINI\x64\Debug\PBLMINI.vcxproj.GenerateResource.cache
+D:\CAFE-MANAGEMENT\PBLMINI\x64\Debug\PBLMINI.vcxproj.CopyComplete
